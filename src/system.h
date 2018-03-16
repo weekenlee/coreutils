@@ -174,6 +174,7 @@ field_sep (unsigned char ch)
 # define bindtextdomain(Domainname, Dirname) /* empty */
 #endif
 
+//使用gettext包裹，多语言支持 http://blog.csdn.net/bytxl/article/details/10191363
 #define _(msgid) gettext (msgid)
 #define N_(msgid) msgid
 
