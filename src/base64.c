@@ -127,7 +127,7 @@ verify (DEC_BLOCKSIZE % 12 == 0);  /* So complete encoded blocks are used.  */
 #endif
 
 static void
-wrap_write (const char *buffer, size_t len,
+wrap_write(const char *buffer, size_t len,
             uintmax_t wrap_column, size_t *current_column, FILE *out)
 {
   size_t written;
@@ -278,7 +278,7 @@ main (int argc, char **argv)
   initialize_main (&argc, &argv);
   set_program_name (argv[0]);
   setlocale (LC_ALL, "");
-  bindtextdomain (PACKAGE, LOCALEDIR);
+  bindtextdomain (PACKAGE, LOCALEDIR);  //∂‡”Ô—‘
   textdomain (PACKAGE);
 
   atexit (close_stdout);
