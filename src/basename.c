@@ -100,6 +100,7 @@ remove_suffix (char *name, const char *suffix)
 /* Perform the basename operation on STRING.  If SUFFIX is non-NULL, remove
    the trailing SUFFIX.  Finally, output the result string.  */
 
+//suffix是由命令行参数指定的
 static void
 perform_basename (const char *string, const char *suffix, bool use_nuls)
 {
@@ -145,7 +146,7 @@ main (int argc, char **argv)
       switch (c)
         {
         case 's':
-          suffix = optarg;
+          suffix = optarg; //suffix是由命令行参数指定的
           /* -s implies -a, so...  */
           FALLTHROUGH;
 
@@ -184,7 +185,7 @@ main (int argc, char **argv)
     }
   else
     perform_basename (argv[optind],
-                      optind + 2 == argc ? argv[optind + 1] : NULL, use_nuls);
+                      optind + 2 == argc ? argv[optind + 1] : NULL, use_nuls); //suffix是由命令行参数指定的
 
   return EXIT_SUCCESS;
 }
